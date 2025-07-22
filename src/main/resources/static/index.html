@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Suporte ao Cliente</title>
+</head>
+<body>
+
+    <!-- Login -->
+    <section id="secao-login">
+        <h2>Login</h2>
+        <form id="formulario-login">
+            <label for="usuario-login">E-mail do Usuário:</label><br />
+            <input type="text" id="usuario-login" required /><br /><br />
+
+            <label for="senha-login">Senha:</label><br />
+            <input type="password" id="senha-login" required /><br /><br />
+
+            <button type="submit">Entrar</button>
+        </form>
+        <p>Não tem conta? <button id="botao-mostrar-cadastro" type="button">Criar nova conta</button></p>
+    </section>
+
+    <!-- Cadastro -->
+    <section id="secao-cadastro" style="display:none;">
+        <h2>Criar Conta</h2>
+        <form id="formulario-cadastro">
+            <label for="nome-cadastro">Nome:</label><br />
+            <input type="text" id="nome-cadastro" required /><br /><br />
+
+            <label for="email-cadastro">Email:</label><br />
+            <input type="text" id="email-cadastro" required /><br /><br />
+
+            <label for="senha-cadastro">Senha(mais de 6 caracteres):</label><br />
+            <input type="password" id="senha-cadastro" required /><br /><br />
+
+            <button type="submit">Registrar</button>
+        </form>
+        <p>Já tem conta? <button id="botao-mostrar-login" type="button">Entrar</button></p>
+    </section>
+
+    <!--Tela do Cliente-->
+    <section id="secao-cliente" style="display:none;">
+        <h2>Seus Chamados</h2>
+        <ul id="lista-chamados">
+            <!-- Chamados aparecerão aqui -->
+        </ul>
+
+        <h3>Criar novo chamado</h3>
+        <form id="formulario-novo-chamado">
+            <label for="titulo-chamado">Título:</label><br />
+            <input type="text" id="titulo-chamado" required /><br /><br />
+
+            <label for="descricao-chamado">Descrição:</label><br />
+            <textarea id="descricao-chamado" required></textarea><br /><br />
+
+            <button type="submit">Criar Chamado</button>
+        </form>
+
+        <button id="botao-logout1" type="button">Logout</button>
+    </section>
+
+    <!--Tela do Administrador-->
+    <section id="secao-adm" style="display:none;">
+        <h4>Chamados em Aberto</h4>
+        <ul id="todos-chamados"> 
+            <!--lista de chamados para responder vai ficar aqui-->
+        </ul>
+
+        <h5 id='titulo' style="display: none;">Chamado:</h5>
+        <form id="resposta-chamado" style="display: none;">
+
+            <input type="hidden" id="chamado-id" />
+            <input type="text" id="nome-chamado" readonly/><br /><br />
+
+            <label for="resposta">Resposta</label><br />
+            <textarea id="resposta" required></textarea><br /><br />
+
+            <button type="submit">Responder Chamado</button>
+        </form>
+
+        <button id="botao-logout2" type="button">Logout</button>
+    </section>
+
+<script src="script.js"></script>
+</body>
+</html>
+
