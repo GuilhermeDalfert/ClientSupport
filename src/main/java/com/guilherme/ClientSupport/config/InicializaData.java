@@ -29,7 +29,7 @@ public class InicializaData implements CommandLineRunner
     public void run(String... args) throws Exception {
         Usuario cliente1 = new Usuario(TipoUser.CLIENTE, "Roberto Silva", "robertoS@gmail.com", codificadorSenha.encode("robertsss123"));
         Usuario cliente2 = new Usuario(TipoUser.CLIENTE, "Carolina", "carolina@gmail.com", codificadorSenha.encode("carol123"));
-        Usuario adm = new Usuario(TipoUser.ADMINISTRADOR, "Guilherme Az","guiaz@gmail.com", codificadorSenha.encode("azguiaz$$"));
+        Usuario adm = new Usuario(TipoUser.ADMINISTRADOR, "Leonardo Az","leoaz@gmail.com", codificadorSenha.encode("azleoaz$$"));
 
         userRepo.save(cliente1);
         userRepo.save(cliente2);
